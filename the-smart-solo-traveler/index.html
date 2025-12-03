@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Smart Solo Traveler | Exclusive Deals</title>
+    
+    <!-- FACEBOOK VERIFICATION TAG GOES HERE -->
+    <!-- <meta name="facebook-domain-verification" content="YOUR_CODE_HERE" /> -->
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#1e293b', // Slate 800
+                            primary: '#0f766e', // Teal 700
+                            accent: '#f59e0b', // Amber 500
+                            light: '#f0fdfa', // Teal 50
+                        },
+                        fontFamily: {
+                            sans: ['Open Sans', 'sans-serif'],
+                            heading: ['Montserrat', 'sans-serif'],
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Open Sans', sans-serif; }
+        h1, h2, h3, .heading-font { font-family: 'Montserrat', sans-serif; }
+        
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        
+        /* Hero Pattern */
+        .hero-bg {
+            background-color: #111827;
+            background-image: linear-gradient(rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 0.7)), url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=2021&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="compass" class="text-brand-primary h-8 w-8"></i>
+                    <span class="font-bold text-xl tracking-tight text-gray-900 heading-font">Smart Solo Traveler</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#deals" class="text-gray-600 hover:text-brand-primary font-medium transition">Top Deals</a>
+                    <a href="#why-us" class="text-gray-600 hover:text-brand-primary font-medium transition">Why Solo?</a>
+                    <a href="#join" class="text-brand-primary font-bold hover:text-brand-dark transition">Get Alerts</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+                    <i data-lucide="menu" class="h-6 w-6"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4">
+            <a href="#deals" class="block py-2 text-gray-600 font-medium">Top Deals</a>
+            <a href="#why-us" class="block py-2 text-gray-600 font-medium">Why Solo?</a>
+            <a href="#join" class="block py-2 text-brand-primary font-bold">Get Alerts</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg text-white py-20 md:py-32">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-brand-accent text-white text-xs font-bold tracking-wider mb-4 uppercase">Solo Travel Hacks</span>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Travel Solo. <br class="md:hidden"> Spend Less.</h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+                We track thousands of hotel rates to find single-occupancy drops in Tokyo, Bangkok, and Seoul. Stop paying the "couple tax."
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#deals" class="bg-brand-primary hover:bg-teal-800 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition transform hover:-translate-y-1">
+                    Find Today's Deals
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Live Deals Section -->
+    <section id="deals" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Trending Solo Stays</h2>
+                <p class="text-gray-600">Hand-picked properties with the best single-traveler ratings.</p>
+                <p class="text-xs text-gray-400 mt-2">*Prices subject to change based on availability.</p>
+            </div>
+
+            <!-- Grid Container (Populated by JS) -->
+            <div id="deals-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Javascript will inject cards here -->
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://www.agoda.com/partners/partnersearch.aspx" target="_blank" rel="nofollow noopener" class="inline-flex items-center gap-2 text-brand-primary font-semibold hover:underline">
+                    Search all Agoda Deals <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust / Why Us -->
+    <section id="why-us" class="py-16 bg-brand-light">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-brand-primary">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Verified Safe</h3>
+                    <p class="text-gray-600 text-sm">We only recommend hotels with high safety ratings for solo travelers, especially in major hubs.</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-brand-primary">
+                        <i data-lucide="banknote"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">No Single Supplement</h3>
+                    <p class="text-gray-600 text-sm">We filter for hotels that don't charge you double for traveling alone.</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-brand-primary">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Prime Locations</h3>
+                    <p class="text-gray-600 text-sm">Stay near the action. All our picks are close to public transit and safe walking zones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-gray-400 py-12 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <i data-lucide="compass" class="text-white h-6 w-6"></i>
+                <span class="font-bold text-lg text-white heading-font">Smart Solo Traveler</span>
+            </div>
+            <div class="text-sm">
+                &copy; <span id="year"></span> Travel Ventures Group. All rights reserved.
+            </div>
+            <div class="flex gap-6 text-sm">
+                <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition">Terms</a>
+            </div>
+        </div>
+        <div class="text-center text-xs mt-8 px-4">
+            <p>Disclosure: This site contains affiliate links. We may earn a commission if you make a purchase, at no extra cost to you.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // 1. Initialize Icons
+        lucide.createIcons();
+
+        // 2. Set Footer Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // 3. Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 4. DYNAMIC DEAL DATA
+        // This is the array you can update with your Python script!
+        // Just replace this list with your JSON output.
+        const deals = [
+            {
+                title: "Shinjuku Granbell Hotel",
+                location: "Tokyo, Japan",
+                price: "$62",
+                rating: "8.4",
+                tags: ["Top Pick", "Near Metro"],
+                image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80", 
+                link: "YOUR_AGODA_AFFILIATE_LINK_HERE" 
+            },
+            {
+                title: "The Quarter Ari",
+                location: "Bangkok, Thailand",
+                price: "$35",
+                rating: "9.1",
+                tags: ["Rooftop Pool", "Coworking"],
+                image: "https://images.unsplash.com/photo-1563911302283-d2bc129e7c1f?auto=format&fit=crop&w=800&q=80",
+                link: "YOUR_AGODA_AFFILIATE_LINK_HERE"
+            },
+            {
+                title: "L7 Hongdae",
+                location: "Seoul, South Korea",
+                price: "$85",
+                rating: "8.9",
+                tags: ["Nightlife", "Modern"],
+                image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=800&q=80",
+                link: "YOUR_AGODA_AFFILIATE_LINK_HERE"
+            },
+            // Add more deals here...
+        ];
+
+        // 5. Render Deals
+        const dealsGrid = document.getElementById('deals-grid');
+
+        deals.forEach(deal => {
+            // Create Tags HTML
+            const tagsHtml = deal.tags.map(tag => 
+                `<span class="bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded font-semibold">${tag}</span>`
+            ).join('');
+
+            const cardHtml = `
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 flex flex-col border border-gray-100">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="${deal.image}" alt="${deal.title}" class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
+                        <div class="absolute top-3 right-3 bg-white px-2 py-1 rounded-lg text-xs font-bold shadow flex items-center gap-1">
+                            <i data-lucide="star" class="w-3 h-3 text-brand-accent fill-current"></i> ${deal.rating}
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="font-bold text-gray-900 text-lg leading-tight">${deal.title}</h3>
+                                <p class="text-gray-500 text-sm flex items-center gap-1 mt-1">
+                                    <i data-lucide="map-pin" class="w-3 h-3"></i> ${deal.location}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-2 mb-4 mt-2">
+                            ${tagsHtml}
+                        </div>
+                        <div class="mt-auto flex items-center justify-between pt-4 border-t border-gray-100">
+                            <div class="flex flex-col">
+                                <span class="text-xs text-gray-400">Solo Rate</span>
+                                <span class="text-2xl font-bold text-brand-primary">${deal.price}<span class="text-sm text-gray-500 font-normal">/night</span></span>
+                            </div>
+                            <a href="${deal.link}" target="_blank" rel="nofollow noopener" class="bg-brand-primary hover:bg-teal-800 text-white text-sm font-bold py-2 px-5 rounded-lg transition">
+                                View Deal
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            dealsGrid.innerHTML += cardHtml;
+        });
+        
+        // Re-init icons for dynamic content
+        lucide.createIcons();
+    </script>
+</body>
+</html>
