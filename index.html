@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Ventures Group | Digital Media & Marketing</title>
+    
+    <!-- FACEBOOK VERIFICATION TAG (For the Business Portfolio) -->
+    <!-- <meta name="facebook-domain-verification" content="YOUR_BUSINESS_VERIFICATION_CODE" /> -->
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tvg: {
+                            navy: '#0f172a', // Slate 900
+                            blue: '#1e40af', // Blue 800
+                            gold: '#ca8a04', // Yellow 600
+                            gray: '#f8fafc', // Slate 50
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        
+        /* Corporate Hero Background */
+        .corp-hero {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 flex flex-col min-h-screen">
+
+    <!-- Corporate Navigation -->
+    <nav class="bg-tvg-navy text-white sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-3">
+                    <!-- Simple CSS Logo based on your Compass idea -->
+                    <div class="relative w-10 h-10 flex items-center justify-center border-2 border-tvg-gold rounded-full">
+                        <i data-lucide="globe" class="w-6 h-6 text-tvg-gold"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-lg tracking-wide leading-none uppercase">Travel Ventures</span>
+                        <span class="text-xs text-slate-400 tracking-widest uppercase">Group</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-10 text-sm font-medium tracking-wide">
+                    <a href="#about" class="hover:text-tvg-gold transition">About Us</a>
+                    <a href="#portfolio" class="hover:text-tvg-gold transition">Our Brands</a>
+                    <a href="#services" class="hover:text-tvg-gold transition">Services</a>
+                    <a href="#contact" class="px-5 py-2 border border-white rounded hover:bg-white hover:text-tvg-navy transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="corp-hero text-white py-32 md:py-48">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+                Connecting the World <br> <span class="italic text-tvg-gold">One Click at a Time.</span>
+            </h1>
+            <p class="text-xl text-slate-300 mb-10 max-w-3xl mx-auto font-light">
+                We are a digital media portfolio focused on high-intent travel audiences. 
+                Bridging the gap between premium hospitality brands and the modern independent traveler.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#portfolio" class="bg-tvg-gold text-tvg-navy font-bold py-3 px-8 rounded shadow-lg hover:bg-yellow-500 transition">
+                    View Portfolio
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Metrics / Credibility Bar -->
+    <div class="bg-slate-100 py-12 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <div class="text-4xl font-bold text-tvg-navy mb-1">2025</div>
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider">Established</div>
+            </div>
+            <div>
+                <div class="text-4xl font-bold text-tvg-navy mb-1">Asia</div>
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider">Primary Market</div>
+            </div>
+            <div>
+                <div class="text-4xl font-bold text-tvg-navy mb-1">High</div>
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider">Intent Audiences</div>
+            </div>
+            <div>
+                <div class="text-4xl font-bold text-tvg-navy mb-1">100%</div>
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider">Digital Focus</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-tvg-navy mb-4">Our Brands</h2>
+                <div class="w-24 h-1 bg-tvg-gold mx-auto"></div>
+                <p class="mt-4 text-slate-600 max-w-2xl mx-auto">
+                    We operate niche media properties that solve specific problems for underserved traveler segments.
+                </p>
+            </div>
+
+            <!-- Brand Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <!-- Brand 1: Smart Solo Traveler -->
+                <div class="group relative bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="h-64 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-teal-900/20 group-hover:bg-teal-900/0 transition z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=1000&q=80" alt="Solo Traveler" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                        <div class="absolute top-4 left-4 bg-teal-700 text-white text-xs font-bold px-3 py-1 rounded z-20">Flagship</div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i data-lucide="compass" class="text-teal-700 w-6 h-6"></i>
+                            <h3 class="text-2xl font-bold text-slate-900 font-sans">The Smart Solo Traveler</h3>
+                        </div>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            A specialized deal discovery platform for the independent Asian travel market. We utilize proprietary data monitoring to identify single-occupancy rate drops in Tokyo, Bangkok, and Seoul.
+                        </p>
+                        <a href="index.html" class="inline-flex items-center text-teal-700 font-semibold hover:text-teal-900 transition">
+                            Visit Website <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Brand 2: Placeholder (Shows growth potential) -->
+                <div class="group relative bg-slate-50 border border-slate-200 border-dashed rounded-xl overflow-hidden flex items-center justify-center min-h-[400px]">
+                    <div class="text-center p-8">
+                        <div class="w-16 h-16 bg-slate-200 rounded-full flex items-center justify-center mx-auto mb-4 text-slate-400">
+                            <i data-lucide="plus" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-400 font-sans mb-2">Future Ventures</h3>
+                        <p class="text-slate-400 text-sm max-w-xs mx-auto">
+                            We are actively exploring opportunities in the culinary tourism and digital nomad spaces.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / About -->
+    <section id="services" class="py-24 bg-tvg-navy text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Data-Driven Approach</h2>
+                    <p class="text-slate-400 text-lg mb-6 leading-relaxed">
+                        Travel Ventures Group isn't just a blog network. We are a technology-first media company. We leverage automation and API connectivity to surface inventory that traditional agencies miss.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-tvg-gold w-5 h-5"></i>
+                            <span>Programmatic Deal Discovery</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-tvg-gold w-5 h-5"></i>
+                            <span>High-Throughput Social Automation</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-tvg-gold w-5 h-5"></i>
+                            <span>Direct-to-Consumer Affiliate Marketing</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-tvg-gold/20 rounded-lg transform rotate-3"></div>
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80" alt="Analytics" class="relative rounded-lg shadow-2xl border border-slate-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Footer -->
+    <footer id="contact" class="bg-white border-t border-slate-200 pt-20 pb-10">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-tvg-navy mb-6">Partner With Us</h2>
+            <p class="text-slate-600 mb-10">
+                Interested in advertising across our network or discussing a partnership?
+            </p>
+            <a href="mailto:contact@travelventuresgroup.com" class="inline-flex items-center gap-2 bg-tvg-navy text-white font-bold py-4 px-10 rounded hover:bg-slate-800 transition">
+                <i data-lucide="mail"></i> Get in Touch
+            </a>
+            
+            <div class="mt-20 pt-10 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center text-sm text-slate-400">
+                <div>
+                    &copy; <span id="year"></span> Travel Ventures Group. All rights reserved.
+                </div>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-tvg-navy">Privacy Policy</a>
+                    <a href="#" class="hover:text-tvg-navy">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
