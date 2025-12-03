@@ -54,12 +54,16 @@
       background: #007aff;
       color: white;
       font-weight: 600;
-      margin-top: 12px;
+      margin: 16px auto;   /* centers horizontally */
     }
     .disclaimer {
       font-size: 12px;
       opacity: 0.7;
       margin-top: 16px;
+    }
+    @media (max-width: 600px) {
+  .banner-wrap {
+    display: none;
     }
     /* Make Agoda widgets responsive containers */
     .widget-box {
@@ -78,12 +82,11 @@
       <p class="brand">Curated by The Smart Solo Traveler</p>
     </header>
 
-    <!-- Agoda dynamic banner 
+    <!-- Agoda dynamic banner -->
     <div class="banner-wrap">
       <div id="adgshp-1361326490"></div>
     </div>
-    -->
-
+  
     <div class="content">
       <h2>Why we like this stay for solo travelers</h2>
       <p>
@@ -106,6 +109,16 @@
         <!-- Agoda search box widget for this hotel -->
         <div id="adgshp20776932"></div>
       </div>
+      
+      <!-- Call to action button that goes to your Agoda deep link -->
+      <a
+        class="btn-primary"
+        href="https://www.agoda.com/ohana-hotel-kuta/hotel/bali-id.html?cid=1944879"
+        rel="noopener"
+        target="_blank"
+      >
+        Check prices on Agoda
+      </a>
 
       <p class="disclaimer">
         Pricing and availability are shown by Agoda. We may earn a small commission if you book through these links,
