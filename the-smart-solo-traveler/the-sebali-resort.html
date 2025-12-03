@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>The Sebali Resort • The Smart Solo Traveler</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+    header {
+      text-align: center;
+      padding: 16px 0;
+    }
+    header h1 {
+      margin: 0 0 8px 0;
+      font-size: 28px;
+    }
+    header p.brand {
+      margin: 0;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+    .banner-wrap {
+      margin: 16px 0;
+      display: flex;
+      justify-content: center;
+      overflow: auto;
+    }
+    .content {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      margin-bottom: 16px;
+    }
+    .content h2 {
+      margin-top: 0;
+    }
+    .btn-primary {
+      display: inline-block;
+      padding: 12px 18px;
+      text-decoration: none;
+      border-radius: 6px;
+      background: #007aff;
+      color: white;
+      font-weight: 600;
+      margin: 16px auto;
+    }
+    .btn-center {
+      text-align: center;
+    }
+    .disclaimer {
+      font-size: 12px;
+      opacity: 0.7;
+      margin-top: 16px;
+    }
+    .widget-box {
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header>
+      <h1>The Sebali Resort</h1>
+      <p class="brand">Curated by The Smart Solo Traveler</p>
+    </header>
+
+    <!-- Agoda dynamic banner -->
+    <div class="banner-wrap">
+      <div id="adgshp-1361326490"></div>
+    </div>
+
+    <div class="content">
+      <h2>Why we like this stay for solo travelers</h2>
+      <p>
+        The Sebali Resort offers a peaceful escape in Ubud with private pool villas, 
+        incredible jungle views, and a relaxing environment perfect for unwinding. 
+        Ideal for solo travelers who want nature, quiet, and a luxury retreat experience 
+        while still being close to cafés and cultural attractions.
+      </p>
+
+      <!-- CTA button centered -->
+      <div class="btn-center">
+        <a
+          class="btn-primary"
+          href="https://www.agoda.com/the-sebali-resort/hotel/bali-id.html?cid=1944879"
+          target="_blank"
+        >
+          Check prices on Agoda
+        </a>
+      </div>
+
+      <!-- Agoda Sherpa search widget -->
+      <div class="widget-box">
+        <div id="adgshp417692922"></div>
+      </div>
+
+      <p class="disclaimer">
+        Pricing and availability are shown by Agoda. We may earn a small commission 
+        if you book through these links, at no additional cost to you.
+      </p>
+    </div>
+  </div>
+
+  <!-- Scripts: keep them exactly as provided -->
+
+  <!-- Dynamic banner script -->
+  <script type="text/javascript" src="//cdn0.agoda.net/images/sherpa/js/init-dynamic_v8.min.js"></script>
+  <script type="text/javascript">
+    var stg = new Object(); 
+    stg.crt="4739540749910";stg.version="1.05"; 
+    stg.id=stg.name="adgshp-1361326490"; 
+    stg.Width="728px"; stg.Height="90px";
+    stg.RefKey="mbju0Qsk9MXvl+uTlid2Yw==";
+    stg.AutoScrollSpeed=3000;stg.AutoScrollToggle=true;
+    stg.SearchboxShow=false;stg.DiscountedOnly=true;
+    stg.Layout="widedynamic"; 
+    stg.Language="en-us";
+    stg.ApiKey="0a89ad3a-ee73-43cc-a57b-695d77bbcf15";
+    stg.Cid="1944879";  
+    stg.Area="34423"; 
+    stg.City="17193";
+    stg.Currency="USD";
+    stg.OverideConf=false; 
+
+    new AgdDynamic('adgshp-1361326490').initialize(stg);
+  </script>
+
+  <!-- Sherpa search widget script -->
+  <script type="text/javascript" src="//cdn0.agoda.net/images/sherpa/js/sherpa_init1_08.min.js"></script>
+  <script type="text/javascript">
+    var stg = new Object(); 
+    stg.crt="5087521875274";stg.version="1.04"; 
+    stg.id=stg.name="adgshp417692922"; 
+    stg.width="320px"; 
+    stg.height="420px";
+    stg.ReferenceKey="RJ626OH2KXTVuXJ4Ihmzng==";
+    stg.Layout="SquareCalendar"; 
+    stg.Language="en-us";
+    stg.Cid="1944879"; 
+    stg.Hid="32985842";
+    stg.DestinationName="The Sebali Resort, Bali, Indonesia";
+    stg.OverideConf=false;
+
+    new AgdSherpa(stg).initialize();
+  </script>
+
+</body>
+</html>
